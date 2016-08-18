@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		4C0A57501D6589A800216C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A574F1D6589A800216C45 /* AppDelegate.swift */; };
-		4C0A57521D6589A800216C45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A57511D6589A800216C45 /* ViewController.swift */; };
+		4C0A57521D6589A800216C45 /* RecognizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A57511D6589A800216C45 /* RecognizerViewController.swift */; };
 		4C0A57551D6589A800216C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A57531D6589A800216C45 /* Main.storyboard */; };
-		4C0A57571D6589A800216C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A57561D6589A800216C45 /* Assets.xcassets */; };
 		4C0A575A1D6589A800216C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A57581D6589A800216C45 /* LaunchScreen.storyboard */; };
 		4C0A57651D6589A800216C45 /* OpenCVRecognizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A57641D6589A800216C45 /* OpenCVRecognizerTests.swift */; };
+		4C0A57731D65C0DD00216C45 /* Recognizer.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A57721D65C0DD00216C45 /* Recognizer.xcassets */; };
+		4C0A57751D65CA2D00216C45 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0A57741D65CA2D00216C45 /* AssetsLibrary.framework */; };
+		4C0A57771D65CA4700216C45 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0A57761D65CA4700216C45 /* opencv2.framework */; };
+		4C0A577D1D65CADE00216C45 /* RecognizerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A577C1D65CADE00216C45 /* RecognizerProtocols.swift */; };
+		4C0A577F1D65DFF600216C45 /* RecognizerProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A577E1D65DFF600216C45 /* RecognizerProcessor.swift */; };
+		4C0A57831D65E73000216C45 /* OpenCVRecognizer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A57821D65E73000216C45 /* OpenCVRecognizer.mm */; };
+		4C0A57851D66169000216C45 /* haarcascade_russian_plate_number.xml in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A57841D66169000216C45 /* haarcascade_russian_plate_number.xml */; };
+		4C0A57881D66231E00216C45 /* OpenCVImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A57871D66231E00216C45 /* OpenCVImage.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +35,25 @@
 /* Begin PBXFileReference section */
 		4C0A574C1D6589A800216C45 /* OpenCVRecognizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCVRecognizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0A574F1D6589A800216C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C0A57511D6589A800216C45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C0A57511D6589A800216C45 /* RecognizerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerViewController.swift; sourceTree = "<group>"; };
 		4C0A57541D6589A800216C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4C0A57561D6589A800216C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C0A57591D6589A800216C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C0A575B1D6589A800216C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0A57601D6589A800216C45 /* OpenCVRecognizerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenCVRecognizerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0A57641D6589A800216C45 /* OpenCVRecognizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCVRecognizerTests.swift; sourceTree = "<group>"; };
 		4C0A57661D6589A800216C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C0A57721D65C0DD00216C45 /* Recognizer.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Recognizer.xcassets; sourceTree = "<group>"; };
+		4C0A57741D65CA2D00216C45 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		4C0A57761D65CA4700216C45 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		4C0A577C1D65CADE00216C45 /* RecognizerProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizerProtocols.swift; sourceTree = "<group>"; };
+		4C0A577E1D65DFF600216C45 /* RecognizerProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizerProcessor.swift; sourceTree = "<group>"; };
+		4C0A57801D65E73000216C45 /* OpenCVRecognizer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenCVRecognizer-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C0A57811D65E73000216C45 /* OpenCVRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVRecognizer.h; sourceTree = "<group>"; };
+		4C0A57821D65E73000216C45 /* OpenCVRecognizer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVRecognizer.mm; sourceTree = "<group>"; };
+		4C0A57841D66169000216C45 /* haarcascade_russian_plate_number.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_russian_plate_number.xml; sourceTree = "<group>"; };
+		4C0A57861D66231E00216C45 /* OpenCVImage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OpenCVImage.hpp; sourceTree = "<group>"; };
+		4C0A57871D66231E00216C45 /* OpenCVImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVImage.mm; sourceTree = "<group>"; };
+		4C0A57891D6626D700216C45 /* opencv-headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "opencv-headers.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0A57771D65CA4700216C45 /* opencv2.framework in Frameworks */,
+				4C0A57751D65CA2D00216C45 /* AssetsLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +79,8 @@
 		4C0A57431D6589A800216C45 = {
 			isa = PBXGroup;
 			children = (
+				4C0A57761D65CA4700216C45 /* opencv2.framework */,
+				4C0A57741D65CA2D00216C45 /* AssetsLibrary.framework */,
 				4C0A574E1D6589A800216C45 /* OpenCVRecognizer */,
 				4C0A57631D6589A800216C45 /* OpenCVRecognizerTests */,
 				4C0A574D1D6589A800216C45 /* Products */,
@@ -77,12 +99,13 @@
 		4C0A574E1D6589A800216C45 /* OpenCVRecognizer */ = {
 			isa = PBXGroup;
 			children = (
-				4C0A574F1D6589A800216C45 /* AppDelegate.swift */,
-				4C0A57511D6589A800216C45 /* ViewController.swift */,
+				4C0A577B1D65CAA800216C45 /* Support */,
+				4C0A57791D65CA8D00216C45 /* Wrapper */,
+				4C0A57781D65CA8400216C45 /* Processor */,
+				4C0A57511D6589A800216C45 /* RecognizerViewController.swift */,
 				4C0A57531D6589A800216C45 /* Main.storyboard */,
-				4C0A57561D6589A800216C45 /* Assets.xcassets */,
-				4C0A57581D6589A800216C45 /* LaunchScreen.storyboard */,
-				4C0A575B1D6589A800216C45 /* Info.plist */,
+				4C0A57721D65C0DD00216C45 /* Recognizer.xcassets */,
+				4C0A57841D66169000216C45 /* haarcascade_russian_plate_number.xml */,
 			);
 			path = OpenCVRecognizer;
 			sourceTree = "<group>";
@@ -94,6 +117,39 @@
 				4C0A57661D6589A800216C45 /* Info.plist */,
 			);
 			path = OpenCVRecognizerTests;
+			sourceTree = "<group>";
+		};
+		4C0A57781D65CA8400216C45 /* Processor */ = {
+			isa = PBXGroup;
+			children = (
+				4C0A577C1D65CADE00216C45 /* RecognizerProtocols.swift */,
+				4C0A577E1D65DFF600216C45 /* RecognizerProcessor.swift */,
+			);
+			path = Processor;
+			sourceTree = "<group>";
+		};
+		4C0A57791D65CA8D00216C45 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				4C0A57801D65E73000216C45 /* OpenCVRecognizer-Bridging-Header.h */,
+				4C0A57891D6626D700216C45 /* opencv-headers.h */,
+				4C0A57811D65E73000216C45 /* OpenCVRecognizer.h */,
+				4C0A57821D65E73000216C45 /* OpenCVRecognizer.mm */,
+				4C0A57861D66231E00216C45 /* OpenCVImage.hpp */,
+				4C0A57871D66231E00216C45 /* OpenCVImage.mm */,
+			);
+			name = Wrapper;
+			path = OpenCVRecognizer/Wrapper;
+			sourceTree = SOURCE_ROOT;
+		};
+		4C0A577B1D65CAA800216C45 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				4C0A574F1D6589A800216C45 /* AppDelegate.swift */,
+				4C0A57581D6589A800216C45 /* LaunchScreen.storyboard */,
+				4C0A575B1D6589A800216C45 /* Info.plist */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,9 +233,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0A57851D66169000216C45 /* haarcascade_russian_plate_number.xml in Resources */,
 				4C0A575A1D6589A800216C45 /* LaunchScreen.storyboard in Resources */,
-				4C0A57571D6589A800216C45 /* Assets.xcassets in Resources */,
 				4C0A57551D6589A800216C45 /* Main.storyboard in Resources */,
+				4C0A57731D65C0DD00216C45 /* Recognizer.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C0A57521D6589A800216C45 /* ViewController.swift in Sources */,
+				4C0A577F1D65DFF600216C45 /* RecognizerProcessor.swift in Sources */,
+				4C0A57521D6589A800216C45 /* RecognizerViewController.swift in Sources */,
+				4C0A57881D66231E00216C45 /* OpenCVImage.mm in Sources */,
+				4C0A577D1D65CADE00216C45 /* RecognizerProtocols.swift in Sources */,
 				4C0A57501D6589A800216C45 /* AppDelegate.swift in Sources */,
+				4C0A57831D65E73000216C45 /* OpenCVRecognizer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,10 +390,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = OpenCVRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gavrilaf.github.com.OpenCVRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVRecognizer/Wrapper/OpenCVRecognizer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -340,10 +408,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = OpenCVRecognizer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gavrilaf.github.com.OpenCVRecognizer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenCVRecognizer/Wrapper/OpenCVRecognizer-Bridging-Header.h";
 			};
 			name = Release;
 		};
