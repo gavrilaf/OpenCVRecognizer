@@ -14,9 +14,9 @@ class RecognizerProcessor: RecognizerProcessorProtocol {
     var originalImage : UIImage
     var recognizer : OpenCVRecognizer?
     
-    init(view: RecognizerViewProtocol) {
+    init(view: RecognizerViewProtocol)
+    {
         self.view = view
-        
         originalImage = UIImage(named: "car-plates")!
         view.updateImage(originalImage)
     }
@@ -26,16 +26,15 @@ class RecognizerProcessor: RecognizerProcessorProtocol {
     
     var view: RecognizerViewProtocol
     
-    func recognize() -> Bool
-    {
+    func recognize() -> Bool {
         recognizer = OpenCVRecognizer(image: originalImage)
         
-        recognizer?.recognize()
+        let found = recognizer?.recognize()
         
         let img = recognizer?.processedImage()
         view.updateImage(img!)
         
-        return true
+        return found!
     }
     
     func blur()
@@ -46,8 +45,9 @@ class RecognizerProcessor: RecognizerProcessorProtocol {
         view.updateImage(img!)
     }
     
-    func newImage()
+    func newImage(image: UIImage)
     {
-    
+        originalImage = image
+        view.updateImage(originalImage)
     }
 }

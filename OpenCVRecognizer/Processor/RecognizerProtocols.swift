@@ -22,7 +22,7 @@ protocol RecognizerProcessorProtocol
     
     func recognize() -> Bool
     func blur()
-    func newImage()
+    func newImage(image: UIImage)
 }
 
 

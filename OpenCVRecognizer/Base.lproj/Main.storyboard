@@ -26,8 +26,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="9I6-yE-lIK">
                                         <rect key="frame" x="20" y="0.0" width="560" height="45"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ld-Lm-Nmy" userLabel="New image">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="45"/>
+                                                <state key="normal" title="New image">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onNewPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ih0-ei-RLC"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-lz-0mf" userLabel="Recognize">
-                                                <rect key="frame" x="0.0" y="0.0" width="72" height="45"/>
+                                                <rect key="frame" x="167" y="0.0" width="72" height="45"/>
                                                 <state key="normal" title="Recognize">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -35,8 +44,8 @@
                                                     <action selector="onRecognize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VS3-sK-Z2Q"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGm-td-AVU" userLabel="Blur">
-                                                <rect key="frame" x="224" y="0.0" width="108" height="45"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGm-td-AVU" userLabel="Blur">
+                                                <rect key="frame" x="329" y="0.0" width="108" height="45"/>
                                                 <state key="normal" title="Blur recognized">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
@@ -44,13 +53,13 @@
                                                     <action selector="onBlurRecognizer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fE-jv-Fel"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ld-Lm-Nmy" userLabel="New image">
-                                                <rect key="frame" x="483" y="0.0" width="77" height="45"/>
-                                                <state key="normal" title="New image">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZK-wL-bx1">
+                                                <rect key="frame" x="526" y="0.0" width="34" height="45"/>
+                                                <state key="normal" title="Save">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="onNewPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ih0-ei-RLC"/>
+                                                    <action selector="onSaveImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dDb-zu-r3h"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -81,6 +90,7 @@
                         <outlet property="blurButton" destination="yGm-td-AVU" id="HEv-Vf-0Ww"/>
                         <outlet property="bottomBar" destination="WRZ-lN-PHh" id="tTw-uS-oT2"/>
                         <outlet property="imageView" destination="RZH-4c-GGW" id="6qv-qS-BOv"/>
+                        <outlet property="recognizeButton" destination="Ugd-lz-0mf" id="SqA-Ux-4Ag"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
