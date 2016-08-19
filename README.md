@@ -8,3 +8,6 @@ Project implements car licence plates recognizing. I use Haar cascade model from
 
 Project uses OpenCV iOS framework from http://opencv.org. 
 I haven't added opencv.framework on github because is too big. So, if you want to run project you have to download opencv and add opencv.framework manually.
+
+##Application screenshot
+![Screenshot](IMG_1309.PNG)
