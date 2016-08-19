@@ -1,9 +1,10 @@
 # OpenCVRecognizer
-Using OpenCV from Swift simple demo
+Using OpenCV-iOS from Swift simple demo
 
-This is simple demo how to use OpenCV object detection functionality from Swift.
+This is simple demo how to use OpenCV object detection functionality from Swift on the iOS platform.
+OpenCV is written on C++, so you can't use it from Swift directly. You have to implement set of wrapper classes using Objective-C++. 
 
-Project implements recognizing for car licence plates. I use Haar cascade model from standard OpenCV delivery.
+Project implements car licence plates recognizing. I use Haar cascade model from standard OpenCV delivery.
 
-Project uses OpenCV iOS framework but I didn't add it on github because it's too big. 
-So, if you want to run project you have to download it and add opencv.framework manually.
+Project uses OpenCV iOS framework from http://opencv.org. 
+I haven't added opencv.framework on github because is too big. So, if you want to run project you have to download opencv and add opencv.framework manually.
