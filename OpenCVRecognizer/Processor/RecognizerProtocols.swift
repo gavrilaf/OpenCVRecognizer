@@ -12,7 +12,7 @@ protocol RecognizerViewProtocol
 {
     var processor: RecognizerProcessorProtocol? { get }
     
-    func updateImage(image : UIImage)
+    func updateImage(_ image : UIImage)
 }
 
 
@@ -22,7 +22,7 @@ protocol RecognizerProcessorProtocol
     
     func recognize() -> Bool
     func blur()
-    func newImage(image: UIImage)
+    func newImage(_ image: UIImage)
 }
 
 

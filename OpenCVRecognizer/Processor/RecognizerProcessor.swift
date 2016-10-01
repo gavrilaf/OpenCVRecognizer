@@ -45,7 +45,7 @@ class RecognizerProcessor: RecognizerProcessorProtocol {
         view.updateImage(img!)
     }
     
-    func newImage(image: UIImage)
+    func newImage(_ image: UIImage)
     {
         originalImage = image
         view.updateImage(originalImage)

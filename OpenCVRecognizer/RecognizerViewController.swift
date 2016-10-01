@@ -21,7 +21,7 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     {
         super.viewDidLoad()
         
-        bottomBar.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.5)
+        bottomBar.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         enableButton(blurButton, enable: false)
         
         processor = RecognizerProcessor(view: self)
@@ -31,14 +31,14 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var processor: RecognizerProcessorProtocol?
     
-    func updateImage(image : UIImage) {
+    func updateImage(_ image : UIImage) {
         imageView.image = image
     }
     
     
     // MARK: Actions
     
-    @IBAction func onRecognize(sender: AnyObject) {
+    @IBAction func onRecognize(_ sender: AnyObject) {
         if processor!.recognize() {
             enableButton(blurButton, enable: true)
             enableButton(recognizeButton, enable: false)
@@ -46,38 +46,38 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     }
 
     
-    @IBAction func onBlurRecognizer(sender: AnyObject) {
+    @IBAction func onBlurRecognizer(_ sender: AnyObject) {
         processor?.blur()
         enableButton(blurButton, enable: false)
     }
     
     
-    @IBAction func onNewPhoto(sender: AnyObject) {
+    @IBAction func onNewPhoto(_ sender: AnyObject) {
         
-        let actionSheet = UIAlertController(title: "New Image", message: nil, preferredStyle: .ActionSheet)
+        let actionSheet = UIAlertController(title: "New Image", message: nil, preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction(title: "Camera", style: .Default, handler: { _ in
-            self.showPicker(.Camera)
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            self.showPicker(.camera)
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Album", style: .Default, handler: { _ in
-            self.showPicker(.PhotoLibrary)
+        actionSheet.addAction(UIAlertAction(title: "Album", style: .default, handler: { _ in
+            self.showPicker(.photoLibrary)
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
-        presentViewController(actionSheet, animated: true, completion: nil);
+        present(actionSheet, animated: true, completion: nil);
         
     }
     
-    @IBAction func onSaveImage(sender: AnyObject) {
+    @IBAction func onSaveImage(_ sender: AnyObject) {
         let activityController = UIActivityViewController(activityItems: ["Save image", imageView.image!], applicationActivities: nil)
-        presentViewController(activityController, animated: true, completion: nil);
+        present(activityController, animated: true, completion: nil);
     }
     
     // MARK: UIImagePickerControllerDelegate
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        dismiss(animated: true, completion: nil)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             processor?.newImage(image)
             enableButton(blurButton, enable: false)
@@ -85,28 +85,28 @@ UIImagePickerControllerDelegate, UINavigationControllerDelegate {
         }
     }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 
 
     // MARK: private
-    func enableButton(button: UIButton, enable: Bool) {
+    func enableButton(_ button: UIButton, enable: Bool) {
         if enable {
-            button.enabled = true
+            button.isEnabled = true
             button.alpha = 1.0
         } else {
-            button.enabled = false
+            button.isEnabled = false
             button.alpha = 0.4
         }
     }
     
-    func showPicker(type: UIImagePickerControllerSourceType) {
+    func showPicker(_ type: UIImagePickerControllerSourceType) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.sourceType = type
         
-        presentViewController(picker, animated: true, completion: nil)
+        present(picker, animated: true, completion: nil)
     }
 
 }
